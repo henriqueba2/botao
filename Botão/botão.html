@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controlar o botão</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 30px 60px;
+            font-size: 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+ 
+        #controlarbotao {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+
+        #Acionarbotao {
+            background-color: #007bff;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        #controlarbotao:hover, #Acionarbotao:hover {
+            background-color: #0056b3;
+        }
+
+        #controlarbotao:focus, #Acionarbotao:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="controlarbotao" onclick="controlarBotao()">Controlar Botão</button>
+    <button id="Acionarbotao" disabled>Acionar Botão</button>
+
+    <script>
+        function controlarBotao() {
+            var botao = document.getElementById("Acionarbotao");
+            if (botao.disabled) {
+                botao.disabled = false;
+            } else {
+                botao.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
